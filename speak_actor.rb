@@ -1,6 +1,11 @@
 require 'celluloid'
-class TestActor
+class SpeakActor
   include Celluloid
+  VOICES = %w(Agnes Albert Alex Bad\ News Bahh Bells Boing Bruce Bubbles Cellos Deranged Fred Good\ News Hysterical Junior Kathy Pipe\ Organ Princess Ralph Trinoids Vicki Victoria Whisper Zarvox)
+
+  def initialize
+    @voice = VOICES.shuffle[0]
+  end
 
   def do_stuff
     my_pool = TestActor.pool(:size => 10)
@@ -21,13 +26,12 @@ class TestActor
     self.terminate
   end
 
-  def say_the_answer
-    puts "the answer is #{@answer}"
-    `say the answer is #{@answer}`
+  def speak(lines)
+    puts "#{lines}"
+    `speak #{lines}`
   end
 
   def do_a_thing(num)
-    voices = %w(Agnes Albert Alex Bad\ News Bahh Bells Boing Bruce Bubbles Cellos Deranged Fred Good\ News Hysterical Junior Kathy Pipe\ Organ Princess Ralph Trinoids Vicki Victoria Whisper Zarvox)
     voice = voices.sample
     `say --voice #{voice} I am number #{num}`
     return num
