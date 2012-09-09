@@ -29,5 +29,3 @@ class Director
     `say #{string}`
   end
 end
-
-Director.new.start_input_loop
