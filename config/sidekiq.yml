@@ -1,0 +1,36 @@
+
+development:
+  client:
+    url: redis://127.0.0.1:6379/0
+    namespace: sidekiq
+    size: 1
+  server:
+    url: redis://127.0.0.1:6379/0
+    namespace: sidekiq
+
+staging:
+  client:
+    url: redis://127.0.0.1:6379/0
+    namespace: sidekiq
+    size: 1
+  server:
+    url: redis://127.0.0.1:6379/0
+    namespace: sidekiq
+
+production:
+  client:
+    url: redis://127.0.0.1:6379/0
+    namespace: sidekiq
+    size: 1
+  server:
+    url: redis://127.0.0.1:6379/0
+    namespace: sidekiq
+
+test:
+  client:
+    url: redis://127.0.0.1:6379/0
+    namespace: sidekiq
+    size: 1
+  server:
+    url: redis://127.0.0.1:6379/0
+    namespace: sidekiq
