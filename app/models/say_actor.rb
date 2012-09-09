@@ -1,5 +1,5 @@
 require 'celluloid'
-class TestActor
+class SayActor
   include Celluloid
   VOICES = %w(Agnes Albert Alex Bad\ News Bahh Bells Boing Bruce Bubbles Cellos Deranged Fred Good\ News Hysterical Junior Kathy Pipe\ Organ Princess Ralph Trinoids Vicki Victoria Whisper Zarvox)
 
@@ -8,7 +8,7 @@ class TestActor
   end
 
   def do_stuff
-    my_pool = TestActor.pool(:size => 10)
+    my_pool = SayActor.pool(:size => 10)
     my_futures = 10.times.map do |i|
       my_pool.future(:do_a_thing, i)
     end
