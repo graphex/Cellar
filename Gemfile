@@ -7,6 +7,7 @@ gem 'rails', '3.2.8'
 
 gem 'sqlite3'
 gem "celluloid", "=0.12.0"
+gem 'open4'
 gem 'parslet', '~>1.4.0'
 gem 'sidekiq', :git => 'git://github.com/mperham/sidekiq.git'
 
