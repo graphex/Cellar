@@ -33,7 +33,7 @@ class Director
   end
 
   def puts_env_info
-    puts "Actor Count: #{Celluloid::Actor.all.to_set.length} Alive: #{Celluloid::Actor.all.compact.to_set.select(&alive?).length}"
+    puts "Actor Count: #{Celluloid::Actor.all.to_set.length} Alive: #{Celluloid::Actor.all.compact.to_set.select(&:alive?).length}"
     puts "Actors:#{Celluloid::Actor.all.compact.to_set.select(&:alive?).collect(&:class)}"
   end
 
