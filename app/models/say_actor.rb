@@ -10,7 +10,17 @@ class SayActor
 
   def say(text)
     Benchmark.realtime do
-      `say --voice #{@voice} #{text}`
+      `say --voice #{@voice} "#{text}"`
     end
   end
+
+  def last_words(text)
+    say(text)
+    raise "ahhhghhhh"
+  end
+
+  def raise_hand
+    i = 1
+  end
+
 end

@@ -5,10 +5,11 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+#gem 'sqlite3'
 gem "celluloid", "=0.12.0"
 gem 'open4'
 gem 'parslet', '~>1.4.0'
+gem 'jruby-openssl'
 gem 'sidekiq', :git => 'git://github.com/mperham/sidekiq.git'
 
 
