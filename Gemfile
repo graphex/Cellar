@@ -9,7 +9,7 @@ gem 'rails', '3.2.8'
 gem "celluloid", "=0.12.0"
 gem 'open4'
 gem 'parslet', '~>1.4.0'
-gem 'jruby-openssl'
+#gem 'jruby-openssl'
 gem 'sidekiq', :git => 'git://github.com/mperham/sidekiq.git'
 
 
