@@ -7,12 +7,14 @@ class SayWrapperActor
   def initialize(voice=nil)
     @voice = voice.blank? ? VOICES.shuffle[0] : voice
     @pid, @stdin, @stdout, @stderr = Open4::popen4 "sh"
-    @stdin.puts "say --voice #{@voice} --progress"
+    @stdin.sync = true
+    #@stdin.puts "say --voice #{@voice} --progress"
+    @stdin.puts "say --voice #{@voice} hello"
   end
 
   def say(text)
     Benchmark.realtime do
-      @stdin.puts(text)
+      @stdin.puts("say --voice #{@voice} #{text}")
     end
   end
 end
